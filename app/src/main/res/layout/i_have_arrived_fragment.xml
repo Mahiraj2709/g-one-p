@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_uperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="220dp"
+        android:orientation="vertical">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_horizontal"
+        android:layout_alignParentStart="true">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_profile"
+            android:src="@drawable/ic_profile_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            app:civ_border_color="@android:color/transparent"
+            app:civ_border_width="4dp" />
+        <TextView
+            android:id="@+id/tv_requestId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:gravity="center_horizontal"
+            android:background="@android:color/black"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/white"
+            android:text="@string/request_id"/>
+
+
+        <LinearLayout
+            android:id="@+id/btn_callCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rect_f_white_s_black"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_phone"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:text="@string/btn_call_customer"
+                android:textColor="#404040" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_arrived"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:background="@color/darkOrange"
+            android:text="@string/title_i_have_arrived"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>
